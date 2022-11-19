@@ -3,36 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './user/home/home.component';
-import { NavBarComponent } from './user/nav-bar/nav-bar.component';
-import { AboutComponent } from './user/about/about.component';
-import { BookingComponent } from './user/booking/booking.component';
-import { CarComponent } from './user/car/car.component';
-import { ContactComponent } from './user/contact/contact.component';
-import { DetailComponent } from './user/detail/detail.component';
-import { ServiceComponent } from './user/service/service.component';
-import { TeamComponent } from './user/team/team.component';
-import { TestimonialComponent } from './user/testimonial/testimonial.component';
-import { FooterComponent } from './user/footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './user/login/login.component';
+import { RegisterComponent } from './user/register/register.component';
+import { ResetPasswordComponent } from './user/reset-password/reset-password.component';
+import { ForgotPasswordComponent } from './user/forgot-password/forgot-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavBarComponent,
-    AboutComponent,
-    BookingComponent,
-    CarComponent,
-    ContactComponent,
-    DetailComponent,
-    ServiceComponent,
-    TeamComponent,
-    TestimonialComponent,
-    FooterComponent
+    LoginComponent,
+    RegisterComponent,
+    ResetPasswordComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
