@@ -10,8 +10,19 @@ import { environment } from 'src/environments/environment';
 export class AuthSystemService {
   public connecte : boolean = false ; 
   logged_in : boolean = false ; 
+  token: any=null
   constructor(private http : HttpClient , public router: Router) { }
-   
+  public getToken(): string {
+    this.token =  sessionStorage.getItem('token');
+    return   this.token 
+  }
+  public isAuthenticated(): boolean {
+    // get the token
+    const token = this.getToken();
+    // return a boolean reflecting 
+    // whether or not the token is expired
+    return tokenNotExpired(null, token);
+  }
   login(data:any): Observable<any> {
     this.logged_in = true ;
     this.connecte = true;
@@ -19,5 +30,15 @@ export class AuthSystemService {
     return this.http.post(environment.urlBackend + 'sessions/', data);
   }
 
+  getAllusers(){
+    return this.http.get(`${environment.urlBackend}`+'admin/')
+  }
 
 }
+
+
+
+function tokenNotExpired(arg0: null, token: string): boolean {
+  throw new Error('Function not implemented.');
+}
+
