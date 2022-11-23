@@ -45,10 +45,7 @@ export class LoginComponent implements OnInit {
 
 
     };
-    
-    alert(data.user.email+' '+ data.user.password );
-    /*
-    debugger
+
     this.Auth.login(data).subscribe(
       response => {
         console.log(response);
@@ -64,12 +61,13 @@ export class LoginComponent implements OnInit {
 
        if(response.user.email_confirmed==true) {
         if(response.logged_in ==true && response.user.role =="admin"  ){ 
+          sessionStorage.setItem( 'token', response.token);
           sessionStorage.setItem( 'webmasterdata', JSON.stringify( response.user ) );
-          console.log(response);
           this.route.navigate(['/dashboard-webmaster']);
         }
-        else if(response.logged_in ==true && response.user.role =="employee")
+        else if(response.logged_in ==true && response.user.role =="client")
         {
+          sessionStorage.setItem( 'token', response.token);
           sessionStorage.setItem( 'clientdata', JSON.stringify( response.user ) );
           this.route.navigate(['/dashboard-client']);
         }
@@ -92,8 +90,7 @@ export class LoginComponent implements OnInit {
       }
      
       },(err:HttpErrorResponse)=>this.messageError=err.error.error);
-      
-    */  }
+ }
 
   
 }
