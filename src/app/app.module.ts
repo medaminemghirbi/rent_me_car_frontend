@@ -12,6 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './service/token.interceptor';
 import { DashboardWebmasterComponent } from './webmaster/dashboard-webmaster/dashboard-webmaster.component';
+import { NavBarComponent } from './webmaster/nav-bar/nav-bar.component';
+import { SideBarComponent } from './webmaster/side-bar/side-bar.component';
+import { AdminProfilComponent } from './webmaster/admin-profil/admin-profil.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { DashboardWebmasterComponent } from './webmaster/dashboard-webmaster/das
     RegisterComponent,
     ResetPasswordComponent,
     ForgotPasswordComponent,
-    DashboardWebmasterComponent
+    DashboardWebmasterComponent,
+    NavBarComponent,
+    SideBarComponent,
+    AdminProfilComponent
   ],
   imports: [
     BrowserModule,
