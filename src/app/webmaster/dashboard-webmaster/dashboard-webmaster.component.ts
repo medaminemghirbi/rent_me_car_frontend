@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthSystemService } from 'src/app/service/auth-system.service';
+import { WebmasterPanelService } from 'src/app/service/webmaster-panel.service';
 
 @Component({
   selector: 'app-dashboard-webmaster',
@@ -13,17 +14,20 @@ export class DashboardWebmasterComponent implements OnInit {
   dataArray:any = [] ;
   messageErr =''
 
-  constructor(private usersService:AuthSystemService,private route:Router ) { }
+  constructor(private adminservice:WebmasterPanelService,private route:Router ) { }
 
   ngOnInit(): void {
   }
 getallusers()
 {
-  this.usersService.getAllusers().subscribe(data=>{
+  this.adminservice.getAllusers().subscribe(data=>{
     this.dataArray=data
     console.log(this.dataArray)
-    
-    this.counter = this.dataArray.length , (err:HttpErrorResponse)=>{
+   if(this.dataArray !=null && this.dataArray <=0 ){
+      this.counter = this.dataArray.length
+      console.log(this.counter)
+    } 
+     (err:HttpErrorResponse)=>{
     this.messageErr="We dont't found this user in our database"} 
   }) 
 }

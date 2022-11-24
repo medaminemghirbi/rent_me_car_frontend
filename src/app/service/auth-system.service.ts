@@ -30,14 +30,9 @@ export class AuthSystemService {
     return this.http.post(environment.urlBackend + 'sessions/', data);
   }
 
-  getAllusers(){
-    return this.http.get(`${environment.urlBackend}`+'admin/')
-  }
+
 
 }
-
-
-
 function tokenNotExpired(arg0: null, token: string): boolean {
   throw new Error('Function not implemented.');
 }

@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  urlBackend:'https://rentmecar-backend.herokuapp.com/',
+
 };

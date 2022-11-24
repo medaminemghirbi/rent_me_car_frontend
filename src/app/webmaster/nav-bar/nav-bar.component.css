@@ -43,7 +43,7 @@ header[role="banner"] h1:before {
   content: "\f1b9";
   font-family: FontAwesome;
   padding-right: 0.6em;
-  color: rgb(55, 31, 103);
+  color: rgb(10, 153, 29);
 }
 header[role="banner"] .utilities {
   width: 100%;

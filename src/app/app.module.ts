@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './user/home/home.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { ResetPasswordComponent } from './user/reset-password/reset-password.component';
@@ -15,6 +15,11 @@ import { DashboardWebmasterComponent } from './webmaster/dashboard-webmaster/das
 import { NavBarComponent } from './webmaster/nav-bar/nav-bar.component';
 import { SideBarComponent } from './webmaster/side-bar/side-bar.component';
 import { AdminProfilComponent } from './webmaster/admin-profil/admin-profil.component';
+import { DashboardClientComponent } from './client/dashboard-client/dashboard-client.component';
+import { ModelsComponent } from './webmaster/models/models.component';
+import { ManageUsersComponent } from './webmaster/manage-users/manage-users.component';
+import { ManageRequestsComponent } from './webmaster/manage-requests/manage-requests.component';
+import { ManageCarsComponent } from './webmaster/manage-cars/manage-cars.component';
 
 
 @NgModule({
@@ -28,7 +33,12 @@ import { AdminProfilComponent } from './webmaster/admin-profil/admin-profil.comp
     DashboardWebmasterComponent,
     NavBarComponent,
     SideBarComponent,
-    AdminProfilComponent
+    AdminProfilComponent,
+    DashboardClientComponent,
+    ModelsComponent,
+    ManageUsersComponent,
+    ManageRequestsComponent,
+    ManageCarsComponent
   ],
   imports: [
     BrowserModule,
