@@ -4,6 +4,7 @@ import { DashboardClientComponent } from './client/dashboard-client/dashboard-cl
 
 import { HomeComponent } from './user/home/home.component';
 import { LoginComponent } from './user/login/login.component';
+import { RegisterComponent } from './user/register/register.component';
 import { AdminProfilComponent } from './webmaster/admin-profil/admin-profil.component';
 import { DashboardWebmasterComponent } from './webmaster/dashboard-webmaster/dashboard-webmaster.component';
 import { ManageCarsComponent } from './webmaster/manage-cars/manage-cars.component';
@@ -15,7 +16,7 @@ import { ModelsComponent } from './webmaster/models/models.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
-
+  {path:'register',component:RegisterComponent},
   /**** webmaster */
   {path:'dashboard-webmaster',component:DashboardWebmasterComponent},
   {path:'model',component:ModelsComponent},
