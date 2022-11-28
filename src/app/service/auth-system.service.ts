@@ -30,6 +30,9 @@ export class AuthSystemService {
     return this.http.post(environment.urlBackend + 'sessions/', data);
   }
 
+  register(data:any): Observable<any> {
+    return this.http.post(environment.urlBackend + 'registrations/' , data)
+  }
 
 
 }
