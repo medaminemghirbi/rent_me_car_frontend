@@ -48,6 +48,9 @@ export class RegisterComponent implements OnInit {
         role : 0 
       }
     };
+    if(data.user.password !=data.user.password_confirmation){
+      
+    }
    this.Auth.register(data).subscribe( 
     Response=>{
       console.log(Response)

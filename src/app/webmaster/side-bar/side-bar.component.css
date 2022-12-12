@@ -72,7 +72,7 @@ header[role="banner"] .utilities li a {
 .users a:before {
   content: "";
 }
-.car a:before{
+.carss a:before{
   content: "\f1b9";
 }
 .model a:before{
@@ -120,7 +120,7 @@ nav[role="navigation"] .comments a:before {
 nav[role="navigation"] .users a:before {
   content: "";
 }
-nav[role="navigation"] .car a:before {
+nav[role="navigation"] .carss a:before {
   content: "\f1b9";
 }
 nav[role="navigation"] .model a:before {
@@ -138,7 +138,7 @@ nav[role="navigation"] .bord a:before {
 .users .users a {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.car .car a {
+.carss .carss a {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .bord .bord a {
