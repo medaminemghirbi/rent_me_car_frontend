@@ -17,7 +17,7 @@ export class WebmasterPanelService {
   addnewemployee(data:any){
     return this.http.post<any>(environment.urlBackend + 'registrations/' , data)
   }
-
+ 
   updateemployee(id:string,newdata:any){
     return this.http.patch(environment.urlBackend+'updateemployeebyadmin/' + id , newdata )
   }
