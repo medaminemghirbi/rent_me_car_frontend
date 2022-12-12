@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  urlBackend:'https://rentmecar-backend.herokuapp.com/',
+  urlBackend:'https://rent-me-car-backend.netlify.app/',
 
 };
